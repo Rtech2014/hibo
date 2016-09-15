@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+   <div id="wrapper">
+  
+        <!-- Sidebar -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
 
-<%= yield %>
+              <%= link_to 'Hibo', statuses_path, class: 'navbar-brand' %>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><%= link_to 'Home', statuses_path %></li>
+              <li><%= link_to 'Status', statuses_path %></li>
+              <li><%= link_to 'New Status', new_status_path %></li> 
+            </ul>
+          </div>
+        </nav>
+  <div class="container">
+    
+    <%= yield %>
+  </div>
 
 </body>
 </html>
