@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>LinkWorld</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -14,7 +14,7 @@
           <div class="container">
             <div class="navbar-header">
 
-              <%= link_to 'Hibo', statuses_path, class: 'navbar-brand' %>
+              <%= link_to 'LinkWorld', statuses_path, class: 'navbar-brand' %>
             </div>
             <ul class="nav navbar-nav">
               <li class="active"><%= link_to 'Home', statuses_path %></li>
@@ -25,6 +25,8 @@
         </nav>
   <div class="container">
     
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
 
